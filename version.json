@@ -1,4 +1,4 @@
 {
-  "versao": "3.1.0",
-  "notas": "Telefone por sub-aba em Tickets, botão WhatsApp (copia + abre a conversa), correções de qualidade e changelog."
+  "versao": "3.3.0",
+  "notas": "POD Correto/Incorreto (com Motivo) + auditoria completa de qualidade e segurança do código."
 }
