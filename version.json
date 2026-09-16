@@ -1,5 +1,5 @@
 {
   "versao": "3.4.0",
-  "permissao": false,
+  "permissao": true,
   "notas": "Conferência de códigos cancelados com confirmação e opção de voltar, remoção automática de duplicados na aba Código, e ajustes gerais de estabilidade."
 }
