@@ -1,4 +1,5 @@
 {
-  "versao": "3.3.0",
-  "notas": "POD Correto/Incorreto (com Motivo) + auditoria completa de qualidade e segurança do código."
+  "versao": "3.4.0",
+  "permissao": false,
+  "notas": "Conferência de códigos cancelados com confirmação e opção de voltar, remoção automática de duplicados na aba Código, e ajustes gerais de estabilidade."
 }
