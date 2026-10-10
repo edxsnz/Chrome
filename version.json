@@ -1,5 +1,5 @@
 {
-  "versao": "3.4.0",
+  "versao": "3.5.0",
   "permissao": true,
-  "notas": "Conferência de códigos cancelados com confirmação e opção de voltar, remoção automática de duplicados na aba Código, e ajustes gerais de estabilidade."
+  "notas": "Suporte ao Mercado Livre em Tickets > Ocorrência (com troca automática do campo), geração direta de código de barras quando há só um código, e ajustes de layout."
 }
