@@ -1,5 +1,5 @@
 {
-  "versao": "3.5.0",
+  "versao": "3.6.0",
   "permissao": true,
-  "notas": "Suporte ao Mercado Livre em Tickets > Ocorrência (com troca automática do campo), geração direta de código de barras quando há só um código, e ajustes de layout."
+  "notas": "Nova aba Lote (consulta de erro de lote) e script de acareação de cada embarcador em Tickets > Ocorrência, com campo Seu nome, bloqueio dos embarcadores só físicos e prévia no estilo do WhatsApp."
 }
