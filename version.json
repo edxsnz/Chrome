@@ -1,5 +1,5 @@
 {
-  "versao": "3.6.0",
+  "versao": "3.6.1",
   "permissao": true,
-  "notas": "Nova aba Lote (consulta de erro de lote) e script de acareação de cada embarcador em Tickets > Ocorrência, com campo Seu nome, bloqueio dos embarcadores só físicos e prévia no estilo do WhatsApp."
+  "notas": "Correções na aba Lote: ela reconhece o JMS aberto e encontra o seu login no sistema, e avisa com um botão quando a extensão precisa ser recarregada."
 }
