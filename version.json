@@ -1,5 +1,5 @@
 {
   "versao": "3.7.0",
-  "permissao": true,
+  "permissao": false,
   "notas": "Scripts de acareação completos para todos os embarcadores: seu nome, rastreio, loja, produto, data e hora da entrega, códigos de cada embarcador, pergunta do lacre e aviso dos campos que faltam."
 }
