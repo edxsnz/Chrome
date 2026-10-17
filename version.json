@@ -1,5 +1,5 @@
 {
-  "versao": "3.6.1",
+  "versao": "3.7.0",
   "permissao": true,
-  "notas": "Correções na aba Lote: ela reconhece o JMS aberto e encontra o seu login no sistema, e avisa com um botão quando a extensão precisa ser recarregada."
+  "notas": "Scripts de acareação completos para todos os embarcadores: seu nome, rastreio, loja, produto, data e hora da entrega, códigos de cada embarcador, pergunta do lacre e aviso dos campos que faltam."
 }
