@@ -1,5 +1,5 @@
 {
-  "versao": "3.8.0",
+  "versao": "3.8.2",
   "permissao": true,
-  "notas": "Visual novo com a cara da J&T: topo vermelho com menu em abas, fonte nova, ícones desenhados e tema escuro revisado. Também mais proteção contra mensagem incompleta, clique duplo no WhatsApp e perda do que foi digitado."
+  "notas": "N° do pedido em todos os scripts de Tickets > Ocorrência (inclusive Wepink, Shein e demais), e campo próprio para o Código CNBR / Código KW na Cainiao e no Kwai."
 }
