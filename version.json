@@ -1,5 +1,5 @@
 {
-  "versao": "3.8.2",
+  "versao": "3.9.0",
   "permissao": true,
-  "notas": "N° do pedido em todos os scripts de Tickets > Ocorrência (inclusive Wepink, Shein e demais), e campo próprio para o Código CNBR / Código KW na Cainiao e no Kwai."
+  "notas": "Aba Lote: mostra se os lotes têm vagas suficientes (150 por lote) ou quantos faltam, lista os lotes não terminados e gera os códigos de barras de cada lote e dos códigos sem lote para bipar direto da tela."
 }
