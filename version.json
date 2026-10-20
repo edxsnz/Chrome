@@ -1,5 +1,5 @@
 {
   "versao": "3.10.0",
   "permissao": true,
-  "notas": "Nova aba Expedido: cola os códigos e ela devolve os que estão com o último status \"Expedido não chegou\". Lote com bipagem contínua, Criar lote e Reconsultar. As consultas de Lote e Expedido continuam com a janela da extensão fechada, e o ícone avisa quando terminam."
+  "notas": "Nova aba Expedido: cola os códigos e ela devolve os que estão com o último status \"Expedido não chegou\", com velocidade que se ajusta sozinha. Lote com bipagem contínua, Criar lote e Reconsultar. As consultas continuam com a janela da extensão fechada, e o ícone avisa quando terminam."
 }
