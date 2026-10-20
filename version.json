@@ -1,5 +1,5 @@
 {
-  "versao": "3.9.0",
+  "versao": "3.10.0",
   "permissao": true,
-  "notas": "Aba Lote: mostra se os lotes têm vagas suficientes (150 por lote) ou quantos faltam, lista os lotes não terminados e gera os códigos de barras de cada lote e dos códigos sem lote para bipar direto da tela."
+  "notas": "Nova aba Expedido: cola os códigos e ela devolve os que estão com o último status \"Expedido não chegou\". Lote com bipagem contínua, Criar lote e Reconsultar. As consultas de Lote e Expedido continuam com a janela da extensão fechada, e o ícone avisa quando terminam."
 }
