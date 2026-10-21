@@ -1,5 +1,9 @@
 {
   "versao": "3.10.1",
   "permissao": true,
+<<<<<<< HEAD
   "notas": "Expedido: velocidade que se ajusta sozinha e freia na hora se o sistema pedir para esperar; no fim, refaz sozinha os códigos que deram erro, para consultar todos os pacotes."
+=======
+  "notas": "Nova aba Expedido: cola os códigos e ela devolve os que estão com o último status \"Expedido não chegou\", com velocidade que se ajusta sozinha. Lote com bipagem contínua, Criar lote e Reconsultar. As consultas continuam com a janela da extensão fechada, e o ícone avisa quando terminam."
+>>>>>>> d21ecc263a8182387203d3beaf9ca2715409d2e1
 }
