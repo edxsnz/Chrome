@@ -1,5 +1,5 @@
 {
-  "versao": "3.10.1",
+  "versao": "3.11.0",
   "permissao": true,
-  "notas": "Expedido: velocidade que se ajusta sozinha e freia na hora se o sistema pedir para esperar; no fim, refaz sozinha os códigos que deram erro, para consultar todos os pacotes."
+  "notas": "Atualização completa: scripts de acareação sem o \"Ler mais\" e com os rótulos do manual (Mercado Livre no modelo exato da cartilha; TikTok com pedido, produto e data), nova sub-aba Guia com o prazo do ticket e o guia rápido dos manuais, lembrete ao copiar, Lote com menos consultas e conferência final, lotes começados primeiro, bipagem com Espaço/Enter/pedal e aba POD removida."
 }
