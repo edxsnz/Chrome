@@ -1,5 +1,5 @@
 {
-  "versao": "3.11.0",
+  "versao": "3.11.1",
   "permissao": true,
-  "notas": "Atualização completa: scripts de acareação completos com as frases oficiais (Mercado Livre como na cartilha; TikTok com pedido e remessa), sem o aviso do lacre na primeira mensagem; nova sub-aba Guia com o prazo do ticket e o guia rápido dos manuais; lembrete ao copiar; Lote com menos consultas e conferência final, lotes começados primeiro; bipagem com Espaço/Enter/pedal; aba POD removida."
+  "notas": "Script do TikTok no formato do manual: um parágrafo só, com o N° do pedido / remessa, o produto e a data e hora da entrega."
 }
