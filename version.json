@@ -1,5 +1,5 @@
 {
-  "versao": "3.11.1",
+  "versao": "3.11.4",
   "permissao": true,
-  "notas": "Script do TikTok no formato do manual: um parágrafo só, com o N° do pedido / remessa, o produto e a data e hora da entrega."
+  "notas": "Lote no mesmo ritmo do Expedido: rajadas de 60 consultas por minuto e, no bloqueio do sistema (erro 405), espera cerca de 1 minuto e testa o mesmo lote, sem marcar nenhum como não terminado."
 }
