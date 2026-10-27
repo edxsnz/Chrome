@@ -1,5 +1,5 @@
 {
-  "versao": "3.11.4",
+  "versao": "3.11.5",
   "permissao": true,
-  "notas": "Lote no mesmo ritmo do Expedido: rajadas de 60 consultas por minuto e, no bloqueio do sistema (erro 405), espera cerca de 1 minuto e testa o mesmo lote, sem marcar nenhum como não terminado."
+  "notas": "Lote e Expedido consultam o mais rápido possível até o sistema bloquear. No bloqueio (erro 405) esperam cerca de 1 minuto, testam o mesmo código ou lote e continuam, sem pular nenhum."
 }
