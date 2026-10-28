@@ -1,5 +1,5 @@
 {
-  "versao": "3.11.5",
+  "versao": "26.10.28",
   "permissao": true,
-  "notas": "Lote e Expedido consultam o mais rápido possível até o sistema bloquear. No bloqueio (erro 405) esperam cerca de 1 minuto, testam o mesmo código ou lote e continuam, sem pular nenhum."
+  "notas": "Novo Autobipe: com o programa JT Bipe aberto no PC e o celular no cabo, cada bipe no app passa para o próximo código sozinho. Para quando a estimativa do lote chega a 150. A versão agora é a data da atualização."
 }
