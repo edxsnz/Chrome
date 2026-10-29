@@ -1,5 +1,5 @@
 {
-  "versao": "26.10.28.1",
+  "versao": "26.10.28.2",
   "permissao": true,
-  "notas": "O JT Bipe agora vem dentro da extensão e abre sozinho quando o Autobipe é ligado. Rode o atualizar-jt.bat uma vez em cada computador."
+  "notas": "Código: novo botão de lixeira para apagar a lista. O JT Bipe vem dentro da extensão e abre sozinho com o Autobipe (rode o atualizar-jt.bat uma vez em cada computador)."
 }
