@@ -25,10 +25,32 @@ echo.
 echo Documentos: %DOCS%
 echo.
 echo [1/5] Baixando a extensao...
-curl -fsSL --retry 2 -o "%ZIP%" "%REPO%/jt-express-extensao.zip?t=%RANDOM%%RANDOM%" || goto erro
+if exist "%ZIP%" del /q "%ZIP%"
+curl -fSL --retry 2 -# -o "%ZIP%" "%REPO%/jt-express-extensao.zip?t=%RANDOM%%RANDOM%"
+if errorlevel 1 (
+  echo.
+  echo O download falhou ^(curl codigo %errorlevel%^). A mensagem do curl esta logo acima.
+  goto erro
+)
+rem o antivirus pode apagar o arquivo logo depois de baixar
+timeout /t 2 /nobreak >nul
+if not exist "%ZIP%" (
+  echo.
+  echo O arquivo baixado sumiu: o antivirus provavelmente apagou ou bloqueou.
+  echo Veja em Seguranca do Windows ^> Protecao contra virus ^> Historico de protecao.
+  goto erro
+)
 rem confere se o .zip veio inteiro (extensao + JT Bipe) antes de apagar a antiga
-tar -tf "%ZIP%" | findstr /i /c:"jt-express-extensao/manifest.json" >nul || goto erro
-tar -tf "%ZIP%" | findstr /i /c:"jt-express-extensao/JT-Bipe.exe" >nul || goto erro
+tar -tf "%ZIP%" > "%TEMP%\jt-lista.txt" 2>&1
+if errorlevel 1 (
+  echo.
+  echo O .zip baixado nao abre ^(veio cortado ou foi bloqueado^):
+  type "%TEMP%\jt-lista.txt"
+  goto erro
+)
+findstr /i /c:"jt-express-extensao/manifest.json" "%TEMP%\jt-lista.txt" >nul || (echo. & echo O .zip nao tem a extensao dentro. & goto erro)
+findstr /i /c:"jt-express-extensao/JT-Bipe.exe" "%TEMP%\jt-lista.txt" >nul || (echo. & echo O .zip nao tem o JT-Bipe.exe dentro ^(o antivirus pode ter tirado^). & goto erro)
+del /q "%TEMP%\jt-lista.txt" >nul 2>&1
 
 echo [2/5] Fechando o JT Bipe e o adb (se estiverem abertos)...
 taskkill /im JT-Bipe.exe /f >nul 2>&1
