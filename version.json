@@ -1,5 +1,5 @@
 {
-  "versao": "26.10.28.2",
+  "versao": "26.10.29",
   "permissao": true,
-  "notas": "Código: novo botão de lixeira para apagar a lista. O JT Bipe vem dentro da extensão e abre sozinho com o Autobipe (rode o atualizar-jt.bat uma vez em cada computador)."
+  "notas": "Autobipe pelo Wi-Fi (plano B): o PC acha o celular na rede sozinho, na 1ª vez só o código de pareamento, depois reconecta sozinho."
 }
