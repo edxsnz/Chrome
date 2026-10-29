@@ -1,5 +1,5 @@
 {
-  "versao": "26.10.29",
+  "versao": "26.10.29.1",
   "permissao": true,
-  "notas": "Autobipe pelo Wi-Fi (plano B): o PC acha o celular na rede sozinho, na 1ª vez só o código de pareamento, depois reconecta sozinho."
+  "notas": "Autobipe mais firme: não pede mais para abrir Bipar pedido quando o celular já está nela (avisos do app por cima e leituras que falham não atrapalham)."
 }
