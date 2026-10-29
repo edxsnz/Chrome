@@ -1,5 +1,5 @@
 {
-  "versao": "26.10.28",
+  "versao": "26.10.28.1",
   "permissao": true,
-  "notas": "Novo Autobipe: com o programa JT Bipe aberto no PC e o celular no cabo, cada bipe no app passa para o próximo código sozinho. Para quando a estimativa do lote chega a 150. A versão agora é a data da atualização."
+  "notas": "O JT Bipe agora vem dentro da extensão e abre sozinho quando o Autobipe é ligado. Rode o atualizar-jt.bat uma vez em cada computador."
 }
