@@ -1,0 +1,2 @@
+# O .bat precisa do fim de linha do Windows (CRLF): o git nao mexe nele
+*.bat -text

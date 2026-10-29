@@ -68,21 +68,23 @@ del /q "%ZIP%"
 rem o JT-Bipe.exe antigo, que ficava solto nos Documentos, agora vem dentro da extensao
 if exist "%DOCS%\JT-Bipe.exe" del /q "%DOCS%\JT-Bipe.exe"
 
-echo [4/5] Registrando o JT Bipe no Chrome (para o Autobipe abrir ele sozinho)...
+echo [4/5] Registrando o JT Bipe nos navegadores (para o Autobipe abrir ele sozinho)...
 if not exist "%JTDADOS%" mkdir "%JTDADOS%"
 powershell -NoProfile -Command "$j = [ordered]@{ name = $env:HOST; description = 'JT Bipe - Autobipe da extensao JT Express'; path = $env:JTEXE; type = 'stdio'; allowed_origins = @('chrome-extension://' + $env:EXT_ID + '/') } | ConvertTo-Json; [IO.File]::WriteAllText((Join-Path $env:JTDADOS ($env:HOST + '.json')), $j)" || goto erro
 if not exist "%JTDADOS%\%HOST%.json" goto erro
+rem Registra em todos os navegadores baseados no Chrome (cada um procura num lugar):
+rem Chrome (todas as versoes), Edge, Brave, Chromium, Vivaldi, Opera, Opera GX,
+rem Yandex, Thorium, Cent e Arc. Navegador que nao estiver instalado nao atrapalha.
 reg add "HKCU\Software\Google\Chrome\NativeMessagingHosts\%HOST%" /ve /t REG_SZ /d "%JTDADOS%\%HOST%.json" /f >nul || goto erro
-rem (Edge, Brave e Chromium tambem, caso a extensao seja usada neles)
-reg add "HKCU\Software\Microsoft\Edge\NativeMessagingHosts\%HOST%" /ve /t REG_SZ /d "%JTDADOS%\%HOST%.json" /f >nul 2>&1
-reg add "HKCU\Software\BraveSoftware\Brave-Browser\NativeMessagingHosts\%HOST%" /ve /t REG_SZ /d "%JTDADOS%\%HOST%.json" /f >nul 2>&1
-reg add "HKCU\Software\Chromium\NativeMessagingHosts\%HOST%" /ve /t REG_SZ /d "%JTDADOS%\%HOST%.json" /f >nul 2>&1
+for %%K in ("Microsoft\Edge" "BraveSoftware\Brave-Browser" "Chromium" "Vivaldi" "Opera Software" "Opera Software\Opera GX Stable" "Yandex\YandexBrowser" "Thorium" "CentBrowser" "The Browser Company\Arc") do (
+  reg add "HKCU\Software\%%~K\NativeMessagingHosts\%HOST%" /ve /t REG_SZ /d "%JTDADOS%\%HOST%.json" /f >nul 2>&1
+)
 
 echo [5/5] Pronto!
 echo.
 echo   Extensao: %PASTA%
 echo.
-echo No Chrome (ou Brave/Edge), abra a pagina de extensoes e clique em recarregar (seta em circulo)
+echo No navegador (Chrome, Brave, Edge, Opera...), abra a pagina de extensoes e clique em recarregar (seta em circulo)
 echo na extensao JT Express.
 echo.
 echo 1a vez neste PC (ou vindo de uma versao antiga, que tinha outro ID):
