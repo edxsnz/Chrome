@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.3.1",
+  "versao": "26.11.13",
   "permissao": true,
-  "notas": "JT Bipe: a janela de teste mostra os avisos do celular, para deixar o Autobipe ainda mais rápido."
+  "notas": "Autobipe removido; revisão geral (duas janelas sem se atrapalhar, bloqueio do JMS compartilhado, atualizador mais seguro)."
 }
