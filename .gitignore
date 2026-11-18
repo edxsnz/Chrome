@@ -1,1 +1,8 @@
-\jt-express-extensao
+# Repositorio publico: so sobem os arquivos de entrega.
+# Tudo o mais (codigo-fonte da extensao, CLAUDE.md, rascunhos) fica so no PC.
+/*
+!/.gitignore
+!/.gitattributes
+!/jt-express-extensao.zip
+!/version.json
+!/atualizar-jt.bat

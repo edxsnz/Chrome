@@ -7,6 +7,10 @@ rem ===== De onde baixa (seu GitHub) =====
 set "REPO=https://raw.githubusercontent.com/edxsnz/Chrome/main"
 rem ======================================
 
+rem O Windows 10/11 ja traz curl e tar; num PC muito antigo eles faltam
+where curl >nul 2>&1 || (echo. & echo Este Windows nao tem o "curl". Atualize o Windows e rode de novo. & goto erro)
+where tar >nul 2>&1 || (echo. & echo Este Windows nao tem o "tar". Atualize o Windows e rode de novo. & goto erro)
+
 rem Pasta Documentos de quem estiver usando (funciona em qualquer PC,
 rem inclusive quando os Documentos ficam no OneDrive)
 for /f "usebackq delims=" %%D in (`powershell -NoProfile -Command "[Console]::OutputEncoding=[Text.Encoding]::UTF8; [Environment]::GetFolderPath('MyDocuments')"`) do set "DOCS=%%D"
@@ -18,12 +22,17 @@ set "PASTA=%DOCS%\jt-express-extensao"
 set "NOVA=%DOCS%\jt-express-extensao.novo"
 set "LISTA=%TEMP%\jt-lista-%RANDOM%%RANDOM%.txt"
 
+rem Versao instalada agora (se houver)
+set "VANT="
+if exist "%PASTA%\manifest.json" for /f "tokens=2 delims=:, " %%V in ('findstr /c:"\"version\"" "%PASTA%\manifest.json"') do set "VANT=%%~V"
+
 echo.
 echo Documentos: "%DOCS%"
+if defined VANT echo Versao instalada: %VANT%
 echo.
 echo [1/4] Baixando a extensao...
 if exist "%ZIP%" del /q "%ZIP%"
-curl -fSL --retry 2 -# -o "%ZIP%" "%REPO%/jt-express-extensao.zip?t=%RANDOM%%RANDOM%"
+curl -fSL --retry 2 --connect-timeout 20 -# -o "%ZIP%" "%REPO%/jt-express-extensao.zip?t=%RANDOM%%RANDOM%"
 if errorlevel 1 (
   echo.
   echo O download falhou. A mensagem do curl esta logo acima.
@@ -56,6 +65,8 @@ if exist "%NOVA%" rmdir /s /q "%NOVA%"
 mkdir "%NOVA%" || goto erro
 tar -xf "%ZIP%" -C "%NOVA%" || (rmdir /s /q "%NOVA%" & goto erro)
 if not exist "%NOVA%\jt-express-extensao\manifest.json" (rmdir /s /q "%NOVA%" & goto erro)
+set "VNOVA="
+for /f "tokens=2 delims=:, " %%V in ('findstr /c:"\"version\"" "%NOVA%\jt-express-extensao\manifest.json"') do set "VNOVA=%%~V"
 if exist "%PASTA%" rmdir /s /q "%PASTA%"
 if exist "%PASTA%" (rmdir /s /q "%NOVA%" & goto erro_pasta)
 move "%NOVA%\jt-express-extensao" "%PASTA%" >nul || tar -xf "%ZIP%" -C "%DOCS%"
@@ -79,9 +90,15 @@ if exist "%LOCALAPPDATA%\JTBipe" (
 rem O JT-Bipe.exe antigo, de quando ficava solto nos Documentos
 if exist "%DOCS%\JT-Bipe.exe" del /q "%DOCS%\JT-Bipe.exe" >nul 2>&1
 
+rem Caminho da pasta na area de transferencia: e so colar (Ctrl+V) no "Carregar sem compactacao"
+<nul set /p "=%PASTA%" | clip >nul 2>&1
+
 echo [4/4] Pronto!
 echo.
+if defined VANT if defined VNOVA echo   Versao: %VANT% -^> %VNOVA%
+if not defined VANT if defined VNOVA echo   Versao: %VNOVA%
 echo   Extensao: "%PASTA%"
+echo   (o caminho da pasta ja esta copiado: Ctrl+V para colar)
 echo.
 echo No navegador (Chrome, Brave, Edge, Opera...), abra a pagina de extensoes e clique em recarregar (seta em circulo)
 echo na extensao JT Express.
@@ -89,7 +106,7 @@ echo.
 echo 1a vez neste PC (ou vindo de uma versao antiga, que tinha outro ID):
 echo   1. Remova a extensao JT Express antiga.
 echo   2. Ligue o "Modo do desenvolvedor" e clique em "Carregar sem compactacao".
-echo   3. Escolha a pasta "%PASTA%"
+echo   3. Cole o caminho (Ctrl+V) ou escolha a pasta "%PASTA%"
 echo   4. Digite seu nome de novo na extensao.
 echo.
 pause

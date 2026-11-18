@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.13",
+  "versao": "26.11.18",
   "permissao": true,
-  "notas": "Autobipe removido; revisão geral (duas janelas sem se atrapalhar, bloqueio do JMS compartilhado, atualizador mais seguro)."
+  "notas": "Nova sub-aba Scripts (17 scripts de ticket comum); Guia atualizada com os treinamentos novos; Guia lembra as seções abertas e tem busca; botão Desfazer depois da lixeira; atalhos Alt+1 a 4; atualizador mostra a versão e copia o caminho da pasta."
 }
