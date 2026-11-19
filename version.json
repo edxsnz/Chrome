@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.18.1",
+  "versao": "26.11.18.2",
   "permissao": true,
-  "notas": "Novo botão Passar sozinho na bipagem do Lote e na aba Código: com o escaneamento contínuo do app ligado, o celular bipa sozinho os códigos da tela."
+  "notas": "Mais leve: listas grandes não travam a digitação; acertos no visual (faixa amarela vazia, lista cortada no Lote, textos cortados na Guia)."
 }
