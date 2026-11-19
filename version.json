@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.18",
+  "versao": "26.11.18.1",
   "permissao": true,
-  "notas": "Nova sub-aba Scripts (17 scripts de ticket comum); Guia atualizada com os treinamentos novos; Guia lembra as seções abertas e tem busca; botão Desfazer depois da lixeira; atalhos Alt+1 a 4; atualizador mostra a versão e copia o caminho da pasta."
+  "notas": "Novo botão Passar sozinho na bipagem do Lote e na aba Código: com o escaneamento contínuo do app ligado, o celular bipa sozinho os códigos da tela."
 }
