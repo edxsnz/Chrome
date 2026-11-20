@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.18.2",
+  "versao": "26.11.20",
   "permissao": true,
-  "notas": "Mais leve: listas grandes não travam a digitação; acertos no visual (faixa amarela vazia, lista cortada no Lote, textos cortados na Guia)."
+  "notas": "Novo botão Preencher na Ocorrência: cole o rastreio e a extensão busca no JMS telefone, nome, origem, pedido, data da entrega e conteúdo."
 }
