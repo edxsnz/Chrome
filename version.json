@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.20",
+  "versao": "26.11.20.1",
   "permissao": true,
-  "notas": "Novo botão Preencher na Ocorrência: cole o rastreio e a extensão busca no JMS telefone, nome, origem, pedido, data da entrega e conteúdo."
+  "notas": "O raio agora busca sozinho ao colar o rastreio, traz o Código KW, a loja de verdade e a NF quando o sistema manda, trava a acareação por mensagem quando o remetente é Arezzo, Motorola e outros só física, avisa sobre vizinho, portaria e POD inválido, e também funciona na aba Endereço."
 }
