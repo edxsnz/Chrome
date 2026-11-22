@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.22.4",
+  "versao": "26.11.22.5",
   "permissao": true,
-  "notas": "Painel do JMS, aba Planilhas: pacote que não deu para consultar não some mais da planilha (seção Erro de consulta), coleta nossa que não chegou na SN RAO aparece em Não chegou e novas observações para devolução, coleta de ponto e tratativa suspeita."
+  "notas": "Painel do JMS de cara nova: trocar de aba não apaga mais o resultado, dá para usar outra aba enquanto uma consulta roda, placar com os números de cada seção, seções que abrem e fecham, busca, botão de expandir e barra de progresso."
 }
