@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.22.1",
+  "versao": "26.11.22.2",
   "permissao": true,
-  "notas": "Painel do JMS: o Ler tela agora pega todas as páginas do monitoramento e avisa se faltar algum registro, o texto do Copiar para o Claude voltou a ser igual ao de antes e, quando o JMS bloqueia, a extensão espera 1 minuto inteiro antes de tentar de novo."
+  "notas": "Painel do JMS: na aba Planilhas, escolha os arquivos RETIDOS e SEM MOV (.xlsx) direto, sem abrir o Excel. Só entram os pacotes que são da F MAT-SP pela coluna da base, sem pegar pacote de outra base por engano."
 }
