@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.20.1",
+  "versao": "26.11.22",
   "permissao": true,
-  "notas": "O raio agora busca sozinho ao colar o rastreio, traz o Código KW, a loja de verdade e a NF quando o sistema manda, trava a acareação por mensagem quando o remetente é Arezzo, Motorola e outros só física, avisa sobre vizinho, portaria e POD inválido, e também funciona na aba Endereço."
+  "notas": "Novo painel ⚡ dentro do JMS (liga no botão de raio da extensão): Recebimento mostra quais pacotes precisam do bipe expedido não chegou, com conferência dupla; Planilhas junta RETIDOS e SEM MOV, mostra o que deram como não chegou e separa as tentativas; Cobrar e Histórico. A aba Expedido saiu da extensão."
 }
