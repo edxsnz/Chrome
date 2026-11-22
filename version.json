@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.22",
+  "versao": "26.11.22.1",
   "permissao": true,
-  "notas": "Novo painel ⚡ dentro do JMS (liga no botão de raio da extensão): Recebimento mostra quais pacotes precisam do bipe expedido não chegou, com conferência dupla; Planilhas junta RETIDOS e SEM MOV, mostra o que deram como não chegou e separa as tentativas; Cobrar e Histórico. A aba Expedido saiu da extensão."
+  "notas": "Painel do JMS: o Ler tela agora pega todas as páginas do monitoramento e avisa se faltar algum registro, o texto do Copiar para o Claude voltou a ser igual ao de antes e, quando o JMS bloqueia, a extensão espera 1 minuto inteiro antes de tentar de novo."
 }
