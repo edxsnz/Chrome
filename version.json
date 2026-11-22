@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.22.3",
+  "versao": "26.11.22.4",
   "permissao": true,
-  "notas": "Painel do JMS, aba Planilhas: nova seção Não chegou (pacote que não chegou fisicamente nunca mais aparece como preso na base) e botão Copiar para a planilha (cola direto na aba Tentativas, célula A2)."
+  "notas": "Painel do JMS, aba Planilhas: pacote que não deu para consultar não some mais da planilha (seção Erro de consulta), coleta nossa que não chegou na SN RAO aparece em Não chegou e novas observações para devolução, coleta de ponto e tratativa suspeita."
 }
