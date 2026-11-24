@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.22.5",
+  "versao": "26.11.24",
   "permissao": true,
-  "notas": "Painel do JMS de cara nova: trocar de aba não apaga mais o resultado, dá para usar outra aba enquanto uma consulta roda, placar com os números de cada seção, seções que abrem e fecham, busca, botão de expandir e barra de progresso."
+  "notas": "Botões novos no fim da linha das sub-abas dos Tickets: um copia o SAC 0800 055 0050 e o outro copia o endereço da base, para os campos novos dos scripts do TikTok."
 }
