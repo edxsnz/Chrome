@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.24.1",
+  "versao": "26.11.24.2",
   "permissao": true,
-  "notas": "Lote em maratona: Criar lote e Continuar não consultam mais, cada lote mostra só os códigos que cabem nele e a conferência é no fim. Painel do JMS de cara nova: Recebimento consulta 1 vez e avisa quando está pronto, aba Planilhas virou lista de tarefas do dia."
+  "notas": "Painel do JMS sempre em tempo real: o Histórico saiu e nenhuma consulta reaproveita resultado antigo."
 }
