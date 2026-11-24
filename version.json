@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.24",
+  "versao": "26.11.24.1",
   "permissao": true,
-  "notas": "Botões novos no fim da linha das sub-abas dos Tickets: um copia o SAC 0800 055 0050 e o outro copia o endereço da base, para os campos novos dos scripts do TikTok."
+  "notas": "Lote em maratona: Criar lote e Continuar não consultam mais, cada lote mostra só os códigos que cabem nele e a conferência é no fim. Painel do JMS de cara nova: Recebimento consulta 1 vez e avisa quando está pronto, aba Planilhas virou lista de tarefas do dia."
 }
