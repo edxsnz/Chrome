@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.24.3",
+  "versao": "26.11.25",
   "permissao": true,
-  "notas": "Painel do JMS: nova aba Não entregues (copia para a planilha) no lugar das abas Planilhas e Cobrar."
+  "notas": "Não entregues: o grupo Ausente e não voltou virou Problemático e não voltou (junta qualquer problemático de dia anterior que não voltou para a base)."
 }
