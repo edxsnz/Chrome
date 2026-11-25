@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.24.2",
+  "versao": "26.11.24.3",
   "permissao": true,
-  "notas": "Painel do JMS sempre em tempo real: o Histórico saiu e nenhuma consulta reaproveita resultado antigo."
+  "notas": "Painel do JMS: nova aba Não entregues (copia para a planilha) no lugar das abas Planilhas e Cobrar."
 }
