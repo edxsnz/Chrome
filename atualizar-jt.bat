@@ -30,7 +30,7 @@ echo.
 echo Documentos: "%DOCS%"
 if defined VANT echo Versao instalada: %VANT%
 echo.
-echo [1/4] Baixando a extensao...
+echo [1/5] Baixando a extensao...
 if exist "%ZIP%" del /q "%ZIP%"
 curl -fSL --retry 2 --connect-timeout 20 -# -o "%ZIP%" "%REPO%/jt-express-extensao.zip?t=%RANDOM%%RANDOM%"
 if errorlevel 1 (
@@ -58,7 +58,7 @@ if errorlevel 1 (
 findstr /i /c:"jt-express-extensao/manifest.json" "%LISTA%" >nul || (del /q "%LISTA%" >nul 2>&1 & echo. & echo O .zip nao tem a extensao dentro. & goto erro)
 del /q "%LISTA%" >nul 2>&1
 
-echo [2/4] Trocando a extensao...
+echo [2/5] Trocando a extensao...
 rem Extrai primeiro numa pasta ao lado e confere; so depois apaga a antiga.
 rem Se algo falhar no meio, a extensao antiga continua funcionando.
 if exist "%NOVA%" rmdir /s /q "%NOVA%"
@@ -74,7 +74,7 @@ rmdir /s /q "%NOVA%" >nul 2>&1
 if not exist "%PASTA%\manifest.json" goto erro
 del /q "%ZIP%"
 
-echo [3/4] Removendo o JT Bipe (Autobipe descontinuado), se ainda estiver neste PC...
+echo [3/5] Removendo o JT Bipe (Autobipe descontinuado), se ainda estiver neste PC...
 rem Fecha o programa e o adb que vinham com ele
 taskkill /im JT-Bipe.exe /f >nul 2>&1
 if exist "%LOCALAPPDATA%\JTBipe\adb\adb.exe" "%LOCALAPPDATA%\JTBipe\adb\adb.exe" kill-server >nul 2>&1
@@ -90,10 +90,25 @@ if exist "%LOCALAPPDATA%\JTBipe" (
 rem O JT-Bipe.exe antigo, de quando ficava solto nos Documentos
 if exist "%DOCS%\JT-Bipe.exe" del /q "%DOCS%\JT-Bipe.exe" >nul 2>&1
 
+echo [4/5] Registrando o "Pelo cabo" (mandar os codigos para o celular pelo USB)...
+rem O host fica em %LOCALAPPDATA%\JTRespostas (fora dos Documentos/OneDrive).
+rem O adb (Android Platform Tools, do Google) e baixado pelo proprio host no 1o uso.
+set "JTR=%LOCALAPPDATA%\JTRespostas"
+rem Fecha o host antigo, se estiver aberto, para poder trocar os arquivos
+powershell -NoProfile -Command "Get-CimInstance Win32_Process -Filter \"Name='powershell.exe'\" | Where-Object { $_.CommandLine -like '*jt-usb.ps1*' } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }" >nul 2>&1
+if not exist "%JTR%\usb" mkdir "%JTR%\usb" >nul 2>&1
+copy /y "%PASTA%\usb\jt-usb.ps1" "%JTR%\usb\jt-usb.ps1" >nul 2>&1
+copy /y "%PASTA%\usb\jt-usb.bat" "%JTR%\usb\jt-usb.bat" >nul 2>&1
+powershell -NoProfile -Command "$b=Join-Path $env:LOCALAPPDATA 'JTRespostas'; $m=[ordered]@{name='com.jtexpress.respostas.usb'; description='JT Respostas Rapidas - Pelo cabo'; path=(Join-Path $b 'usb\jt-usb.bat'); type='stdio'; allowed_origins=@('chrome-extension://caolkdhekpnghlfcihnmcpclkplajffi/')}; [IO.File]::WriteAllText((Join-Path $b 'com.jtexpress.respostas.usb.json'), ($m | ConvertTo-Json), (New-Object Text.UTF8Encoding $false))" >nul 2>&1
+for %%K in ("Google\Chrome" "Microsoft\Edge" "BraveSoftware\Brave-Browser" "Chromium" "Vivaldi" "Opera Software" "Opera Software\Opera GX Stable" "Yandex\YandexBrowser" "Thorium" "CentBrowser" "The Browser Company\Arc") do (
+  reg add "HKCU\Software\%%~K\NativeMessagingHosts\com.jtexpress.respostas.usb" /ve /t REG_SZ /d "%JTR%\com.jtexpress.respostas.usb.json" /f >nul 2>&1
+)
+if not exist "%JTR%\usb\jt-usb.ps1" echo   Aviso: nao consegui copiar o programa do cabo. O resto da extensao funciona normal.
+
 rem Caminho da pasta na area de transferencia: e so colar (Ctrl+V) no "Carregar sem compactacao"
 <nul set /p "=%PASTA%" | clip >nul 2>&1
 
-echo [4/4] Pronto!
+echo [5/5] Pronto!
 echo.
 if defined VANT if defined VNOVA echo   Versao: %VANT% -^> %VNOVA%
 if not defined VANT if defined VNOVA echo   Versao: %VNOVA%
