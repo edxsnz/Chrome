@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.27.1",
+  "versao": "26.11.27.2",
   "permissao": true,
-  "notas": "Correção: o painel do JMS não carrega mais duas vezes na mesma aba (erro 'already been declared')."
+  "notas": "Ler tela espera o JMS responder, mesmo quando ele demora, sem pedir de novo. Consultas ao JMS num ritmo constante (1 a cada 1,1 s) para não bloquear."
 }
