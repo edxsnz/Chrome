@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.27.2",
+  "versao": "26.11.27.3",
   "permissao": true,
-  "notas": "Ler tela espera o JMS responder, mesmo quando ele demora, sem pedir de novo. Consultas ao JMS num ritmo constante (1 a cada 1,1 s) para não bloquear."
+  "notas": "Listas pequenas (até 63 códigos) são consultadas na hora; listas maiores, uma a cada 1,1 segundo, para o JMS não bloquear."
 }
