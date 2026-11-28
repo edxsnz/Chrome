@@ -1,5 +1,5 @@
 {
-  "versao": "26.11.27",
+  "versao": "26.11.27.1",
   "permissao": true,
-  "notas": "Bipar pelo cabo (Código e Lote), Ler tela que espera o JMS, Não entregues de ontem para trás e consultas no ritmo que não bloqueia."
+  "notas": "Correção: o painel do JMS não carrega mais duas vezes na mesma aba (erro 'already been declared')."
 }
